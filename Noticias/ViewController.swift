@@ -6,14 +6,62 @@
 //
 
 import UIKit
+import Alamofire
+import AlamofireImage
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
 
+    @IBOutlet weak var myCollection: UICollectionView!
+    
+    let requisicaoDeNoticias = RequisicaoDeNoticias()
+    var listaNoticias: [Noticia] = []
+
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        myCollection.delegate = self
+        myCollection.dataSource = self
+        listaNoticias = requisicaoDeNoticias.makeRequest()
+        
+    }
+    // MARK: Numero de linhas
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return listaNoticias.count
+    }
+    // MARK: Conteudo Da Celula
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let celulaNoticia = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ListaCollectionViewCell
+        
+        celulaNoticia.labelTitulo.text = listaNoticias[indexPath.row].title
+      
+        let urlImage = listaNoticias[indexPath.row].urlToImage
+        if let image = URL(string: "\(urlImage)") {
+            celulaNoticia.imagemNoticia.af_setImage(withURL: image)
+        }
+        celulaNoticia.labelDescricao.text = listaNoticias[indexPath.row].articleDescription
+        celulaNoticia.layer.cornerRadius = 9
+    
+
+        return celulaNoticia
+        
+    }
+    // MARK: Tamanho da Celula
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let alturaCelula = collectionView.bounds.height / 2
+        let larguraCelula = collectionView.bounds.width / 1.05
+        return CGSize(width: larguraCelula, height: alturaCelula)
+    }
+    //MARK: Pega o click do usuario e leva ele para a pagina
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //let celulaNoticia = listaNoticias[indexPath.item]
+        UIApplication.shared.openURL(URL(string: listaNoticias[indexPath.row].url)!)
+
+    }
+
+    
+    
     }
 
 
-}
+
+
 
