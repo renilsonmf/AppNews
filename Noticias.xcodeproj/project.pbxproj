@@ -11,6 +11,7 @@
 		1C088167265E7A7800F02AB5 /* ApiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C088166265E7A7800F02AB5 /* ApiKey.swift */; };
 		1C088176265E873500F02AB5 /* TopicosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C088175265E873500F02AB5 /* TopicosViewController.swift */; };
 		1C08817B265FD02E00F02AB5 /* ConfiguracaoTopicos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C08817A265FD02E00F02AB5 /* ConfiguracaoTopicos.swift */; };
+		1C4F3CE426601F1E000ED19E /* ListaCategoriaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4F3CE326601F1E000ED19E /* ListaCategoriaTableViewCell.swift */; };
 		1C6A5CB9265D675000183DFD /* ListaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6A5CB8265D675000183DFD /* ListaCollectionViewCell.swift */; };
 		1CB2F0CD265C129400F878AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB2F0CC265C129400F878AD /* AppDelegate.swift */; };
 		1CB2F0CF265C129400F878AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB2F0CE265C129400F878AD /* SceneDelegate.swift */; };
@@ -49,6 +50,7 @@
 		1C088166265E7A7800F02AB5 /* ApiKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiKey.swift; sourceTree = "<group>"; };
 		1C088175265E873500F02AB5 /* TopicosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicosViewController.swift; sourceTree = "<group>"; };
 		1C08817A265FD02E00F02AB5 /* ConfiguracaoTopicos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguracaoTopicos.swift; sourceTree = "<group>"; };
+		1C4F3CE326601F1E000ED19E /* ListaCategoriaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaCategoriaTableViewCell.swift; sourceTree = "<group>"; };
 		1C6A5CB8265D675000183DFD /* ListaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaCollectionViewCell.swift; sourceTree = "<group>"; };
 		1CB2F0C9265C129400F878AD /* Noticias.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Noticias.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CB2F0CC265C129400F878AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -109,7 +111,6 @@
 			isa = PBXGroup;
 			children = (
 				1CB2F0D0265C129400F878AD /* NoticiasViewController.swift */,
-				1C088175265E873500F02AB5 /* TopicosViewController.swift */,
 				1C08817A265FD02E00F02AB5 /* ConfiguracaoTopicos.swift */,
 			);
 			path = Controller;
@@ -123,11 +124,29 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		1C088182266016B300F02AB5 /* viewModel */ = {
+		1C088182266016B300F02AB5 /* Categorias */ = {
 			isa = PBXGroup;
 			children = (
+				1C4F3CE226601EF8000ED19E /* View */,
+				1C4F3CE126601EF1000ED19E /* Controller */,
 			);
-			path = viewModel;
+			path = Categorias;
+			sourceTree = "<group>";
+		};
+		1C4F3CE126601EF1000ED19E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1C088175265E873500F02AB5 /* TopicosViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1C4F3CE226601EF8000ED19E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1C4F3CE326601F1E000ED19E /* ListaCategoriaTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		1CB2F0C0265C129400F878AD = {
@@ -155,10 +174,10 @@
 		1CB2F0CB265C129400F878AD /* Noticias */ = {
 			isa = PBXGroup;
 			children = (
-				1C088182266016B300F02AB5 /* viewModel */,
+				1CB2F105265C180400F878AD /* Model */,
+				1C088182266016B300F02AB5 /* Categorias */,
 				1C088173265E86E300F02AB5 /* Controller */,
 				1C088174265E86F300F02AB5 /* View */,
-				1CB2F105265C180400F878AD /* Model */,
 				1CB2F0CC265C129400F878AD /* AppDelegate.swift */,
 				1CB2F0CE265C129400F878AD /* SceneDelegate.swift */,
 				1CB2F0D2265C129400F878AD /* Main.storyboard */,
@@ -478,6 +497,7 @@
 				1CB2F0D1265C129400F878AD /* NoticiasViewController.swift in Sources */,
 				1C088176265E873500F02AB5 /* TopicosViewController.swift in Sources */,
 				1CB2F0CD265C129400F878AD /* AppDelegate.swift in Sources */,
+				1C4F3CE426601F1E000ED19E /* ListaCategoriaTableViewCell.swift in Sources */,
 				1C088167265E7A7800F02AB5 /* ApiKey.swift in Sources */,
 				1C08817B265FD02E00F02AB5 /* ConfiguracaoTopicos.swift in Sources */,
 				1CB2F10A265C182100F878AD /* NoticiasAPI.swift in Sources */,

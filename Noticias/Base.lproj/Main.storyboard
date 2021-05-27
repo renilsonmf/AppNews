@@ -12,13 +12,13 @@
         <!--Notícias-->
         <scene sceneID="2zr-Bf-Tb3">
             <objects>
-                <viewController id="vRX-Xk-85J" customClass="TopicosViewController" customModule="Noticias" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vRX-Xk-85J" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rqs-yv-27l">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r0y-X8-ek6">
-                                <rect key="frame" x="16" y="452" width="344" height="93"/>
+                                <rect key="frame" x="16" y="408" width="344" height="93"/>
                                 <color key="backgroundColor" red="0.25655551083070122" green="0.42977637395188145" blue="0.58068289974619292" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="93" id="9j7-a7-kA4"/>
@@ -29,12 +29,9 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="titleShadowColor" red="0.29857318026823276" green="0.41109007886165294" blue="0.58068289974619292" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="segueCiencias" id="BWI-PL-5dc"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6zS-01-Ut2">
-                                <rect key="frame" x="16" y="232" width="344" height="93"/>
+                                <rect key="frame" x="16" y="188" width="344" height="93"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="93" id="NAh-zJ-tU8"/>
@@ -44,12 +41,9 @@
                                 <state key="normal" title="Esportes">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="segueEsportes" id="I88-00-YBu"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xyc-34-wCP">
-                                <rect key="frame" x="16" y="342" width="344" height="93"/>
+                                <rect key="frame" x="16" y="298" width="344" height="93"/>
                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="93" id="LsL-yC-R0q"/>
@@ -59,12 +53,9 @@
                                 <state key="normal" title="Turismo">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="segueTurismo" id="xus-yi-jug"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sRn-SQ-XnJ">
-                                <rect key="frame" x="16" y="122" width="344" height="93"/>
+                                <rect key="frame" x="16" y="78" width="344" height="93"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="93" id="7MY-dI-iV9"/>
@@ -74,9 +65,6 @@
                                 <state key="normal" title="Técnologia">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="segueTecnologia" id="bAt-Bw-hfD"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nIn-Dq-S8G"/>
@@ -100,7 +88,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VA3-8R-TlW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1178.4000000000001" y="58.920539730134934"/>
+            <point key="canvasLocation" x="1302" y="-833"/>
         </scene>
         <!--Noticias View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -246,18 +234,77 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="vRX-Xk-85J" kind="relationship" relationship="rootViewController" id="FGg-tX-pvo"/>
+                        <segue destination="Oot-66-Tme" kind="relationship" relationship="rootViewController" id="xRx-yy-CIe"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RdE-vA-02i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="425" y="59"/>
         </scene>
+        <!--Topicos View Controller-->
+        <scene sceneID="f60-I9-bBE">
+            <objects>
+                <viewController id="Oot-66-Tme" customClass="TopicosViewController" customModule="Noticias" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vvJ-Cc-Yzq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="LcE-8x-AHN">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rQu-1y-yOh">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellCategoria" rowHeight="102" id="o8K-nX-Op0" customClass="ListaCategoriaTableViewCell" customModule="Noticias" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="375" height="102"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="o8K-nX-Op0" id="Fyy-Rw-IfD">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="102"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Categoria" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mG4-un-gtt">
+                                                            <rect key="frame" x="39" y="11" width="296" height="80"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="labelNomeCategoria" destination="mG4-un-gtt" id="EjE-ib-viX"/>
+                                                    <segue destination="BYZ-38-t0r" kind="show" identifier="segueCategoria" id="GOl-Jj-U7w"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xXO-78-8IB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xXO-78-8IB" firstAttribute="bottom" secondItem="LcE-8x-AHN" secondAttribute="bottom" id="2aF-xS-AEq"/>
+                            <constraint firstItem="LcE-8x-AHN" firstAttribute="top" secondItem="xXO-78-8IB" secondAttribute="top" id="VBt-f0-lAf"/>
+                            <constraint firstItem="LcE-8x-AHN" firstAttribute="leading" secondItem="xXO-78-8IB" secondAttribute="leading" id="i9A-gr-rv6"/>
+                            <constraint firstItem="xXO-78-8IB" firstAttribute="trailing" secondItem="LcE-8x-AHN" secondAttribute="trailing" id="m8d-X1-3xV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="oSa-bf-XeV"/>
+                    <connections>
+                        <outlet property="myTableView" destination="rQu-1y-yOh" id="AfZ-fw-sMD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d9i-rH-TXw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1189.5999999999999" y="58.920539730134934"/>
+        </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="bAt-Bw-hfD"/>
-    </inferredMetricsTieBreakers>
     <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
