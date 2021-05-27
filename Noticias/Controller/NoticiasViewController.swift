@@ -19,32 +19,19 @@ class NoticiasViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     let requisicaoDeNoticias = RequisicaoDeNoticias()
     var listaNoticias: [NoticiaModel] = []
+    var dado = ["",""]
     
     override func viewDidLoad() {
         myCollection.delegate = self
         myCollection.dataSource = self
         
-        listaNoticias = requisicaoDeNoticias.makeRequest(urlRequisicao: singleton.topicoSelecionado)
-
-        retornaTitulo(noticia: singleton.topicoSelecionado)
+        listaNoticias = requisicaoDeNoticias.makeRequest(urlRequisicao: dado[1] )
+        retornaTitulo()
     }
     
-    //MARK: Muda o titulo da categoria de acordo com a categoria selecionada
-    func retornaTitulo(noticia: String) -> String{
-        
-        if noticia == singleton.topicoTecnologia{
-            labelTitulo.text = "Tecnológicas"
-        }
-        else if noticia == singleton.topicoCiencias{
-            labelTitulo.text = "Científicas"
-        }
-        else if noticia == singleton.topicoEsportes{
-            labelTitulo.text = "Esportivas"
-        }
-        else if noticia == singleton.topicoTurismo{
-            labelTitulo.text = "Turismo"
-        }
-        return noticia
+    // MARK: Muda o titulo da categoria de acordo com a categoria selecionada
+    func retornaTitulo(){
+        labelTitulo.text = dado[0]
     }
     
     

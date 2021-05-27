@@ -27,7 +27,7 @@ class TopicosViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let celulaCategoria = tableView.dequeueReusableCell(withIdentifier: "cellCategoria", for: indexPath) as! ListaCategoriaTableViewCell
-        celulaCategoria.labelNomeCategoria.text = singleton.listaCategorias[indexPath.row]
+        celulaCategoria.labelNomeCategoria.text = singleton.listaCategorias[indexPath.row][0]
         return celulaCategoria
     }
     
@@ -36,18 +36,17 @@ class TopicosViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.myTableView.deselectRow(at: indexPath, animated: true)
-        let indice = indexPath.row
-        let categoria = self.singleton.listaCategorias[indice]
-       // self.performSegue(withIdentifier: "segueCategoria", sender: nil)
-       // NoticiasViewController().listaNoticias = indice
+        noticiasviewController?.dado = singleton.listaCategorias[indexPath.row]
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
       
         noticiasviewController = segue.destination as? NoticiasViewController
-        if segue.identifier == "segueCategoria"{
-            noticiasviewController?.singleton.topicoSelecionado = singleton.topicoTecnologia
-        }
+        
+        //if segue.identifier == "segueCategoria"{
+        //    noticiasviewController?.singleton.topicoSelecionado = singleton.topicoTecnologia
+      //  }
+        
             
         }
         
