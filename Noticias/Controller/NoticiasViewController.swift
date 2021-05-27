@@ -17,8 +17,7 @@ class NoticiasViewController: UIViewController, UICollectionViewDelegate, UIColl
     @IBOutlet weak var myCollection: UICollectionView!
     
     let requisicaoDeNoticias = RequisicaoDeNoticias()
-    var listaNoticias: [Noticia] = []
-    let topicosViewController = TopicosViewController()
+    var listaNoticias: [NoticiaModel] = []
     
     override func viewDidLoad() {
         myCollection.delegate = self
@@ -47,17 +46,17 @@ class NoticiasViewController: UIViewController, UICollectionViewDelegate, UIColl
         return celulaNoticia
         
     }
+    
     // MARK: Tamanho da Celula
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let alturaCelula = collectionView.bounds.height / 2
         let larguraCelula = collectionView.bounds.width / 1.05
         return CGSize(width: larguraCelula, height: alturaCelula)
     }
+    
     //MARK: Pega o click do usuario e leva ele para a pagina
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //let celulaNoticia = listaNoticias[indexPath.item]
         UIApplication.shared.openURL(URL(string: listaNoticias[indexPath.row].url)!)
-
     }
 
     

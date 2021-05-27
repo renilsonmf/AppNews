@@ -3,16 +3,16 @@ import Foundation
 
 
 
-struct Noticias: Codable {
+struct NoticiasModel: Codable {
     
-    let articles: [Noticia]
+    let articles: [NoticiaModel]
     enum CodingKeys: String, CodingKey {
         case articles
     }
 }
 
 // MARK: - Article
-struct Noticia: Codable {
+struct NoticiaModel: Codable {
   //  let author: String
     let title: String?
     let articleDescription: String

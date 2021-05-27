@@ -26,22 +26,31 @@
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="segueTecnologia" id="bAt-Bw-hfD"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r0y-X8-ek6">
-                                <rect key="frame" x="109" y="220" width="156" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
-                                <state key="normal" title="Ciências"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="segueCiencias" id="BWI-PL-5dc"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6zS-01-Ut2">
-                                <rect key="frame" x="109" y="328" width="156" height="59"/>
+                                <rect key="frame" x="109" y="232" width="156" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <state key="normal" title="Esportes"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="segueEsportes" id="I88-00-YBu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xyc-34-wCP">
+                                <rect key="frame" x="109" y="349" width="156" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <state key="normal" title="Turismo"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="segueTurismo" id="xus-yi-jug"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r0y-X8-ek6">
+                                <rect key="frame" x="109" y="457" width="156" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                <state key="normal" title="Ciências"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="segueCiencias" id="BWI-PL-5dc"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -54,10 +63,10 @@
             </objects>
             <point key="canvasLocation" x="1178.4000000000001" y="58.920539730134934"/>
         </scene>
-        <!--View Controller-->
+        <!--Noticias View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Noticias" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="NoticiasViewController" customModule="Noticias" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -184,7 +193,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2023.2" y="58.920539730134934"/>
+            <point key="canvasLocation" x="1978" y="59"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dwV-Ce-uX4">
@@ -202,11 +211,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RdE-vA-02i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="237.59999999999999" y="58.920539730134934"/>
+            <point key="canvasLocation" x="425" y="59"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="I88-00-YBu"/>
+        <segue reference="xus-yi-jug"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemGray5Color">
@@ -220,6 +229,9 @@
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
