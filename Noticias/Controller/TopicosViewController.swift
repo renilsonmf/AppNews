@@ -10,25 +10,21 @@ import UIKit
 class TopicosViewController: UIViewController {
     
     let singleton: ConfiguracaoTopicos = ConfiguracaoTopicos.topicos
-    var viewController: NoticiasViewController?
+    var noticiasviewController: NoticiasViewController?
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
-    public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        viewController = segue.destination as? NoticiasViewController
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        noticiasviewController = segue.destination as? NoticiasViewController
         if segue.identifier == "segueTecnologia"{
-            viewController?.singleton.topicoSelecionado = singleton.topicoTecnologia
+            noticiasviewController?.singleton.topicoSelecionado = singleton.topicoTecnologia
         }
         else if segue.identifier == "segueEsportes"{
-            viewController?.singleton.topicoSelecionado = singleton.topicoEsportes
+            noticiasviewController?.singleton.topicoSelecionado = singleton.topicoEsportes
         }
         else if segue.identifier == "segueTurismo"{
-            viewController?.singleton.topicoSelecionado = singleton.topicoTurismo
+            noticiasviewController?.singleton.topicoSelecionado = singleton.topicoTurismo
         }
         else{
-            viewController?.singleton.topicoSelecionado = singleton.topicoCiencias
+            noticiasviewController?.singleton.topicoSelecionado = singleton.topicoCiencias
         }
     }
     

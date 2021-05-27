@@ -123,6 +123,13 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		1C088182266016B300F02AB5 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
 		1CB2F0C0265C129400F878AD = {
 			isa = PBXGroup;
 			children = (
@@ -148,8 +155,9 @@
 		1CB2F0CB265C129400F878AD /* Noticias */ = {
 			isa = PBXGroup;
 			children = (
-				1C088174265E86F300F02AB5 /* View */,
+				1C088182266016B300F02AB5 /* viewModel */,
 				1C088173265E86E300F02AB5 /* Controller */,
+				1C088174265E86F300F02AB5 /* View */,
 				1CB2F105265C180400F878AD /* Model */,
 				1CB2F0CC265C129400F878AD /* AppDelegate.swift */,
 				1CB2F0CE265C129400F878AD /* SceneDelegate.swift */,

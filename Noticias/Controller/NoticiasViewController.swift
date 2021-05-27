@@ -14,6 +14,7 @@ class NoticiasViewController: UIViewController, UICollectionViewDelegate, UIColl
 
     let singleton: ConfiguracaoTopicos = ConfiguracaoTopicos.topicos
     
+    @IBOutlet weak var labelTitulo: UILabel!
     @IBOutlet weak var myCollection: UICollectionView!
     
     let requisicaoDeNoticias = RequisicaoDeNoticias()
@@ -22,9 +23,31 @@ class NoticiasViewController: UIViewController, UICollectionViewDelegate, UIColl
     override func viewDidLoad() {
         myCollection.delegate = self
         myCollection.dataSource = self
+        
         listaNoticias = requisicaoDeNoticias.makeRequest(urlRequisicao: singleton.topicoSelecionado)
 
+        retornaTitulo(noticia: singleton.topicoSelecionado)
     }
+    
+    //MARK: Muda o titulo da categoria de acordo com a categoria selecionada
+    func retornaTitulo(noticia: String) -> String{
+        
+        if noticia == singleton.topicoTecnologia{
+            labelTitulo.text = "Tecnológicas"
+        }
+        else if noticia == singleton.topicoCiencias{
+            labelTitulo.text = "Científicas"
+        }
+        else if noticia == singleton.topicoEsportes{
+            labelTitulo.text = "Esportivas"
+        }
+        else if noticia == singleton.topicoTurismo{
+            labelTitulo.text = "Turismo"
+        }
+        return noticia
+    }
+    
+    
     // MARK: Numero de linhas
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return listaNoticias.count

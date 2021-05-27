@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Topicos View Controller-->
+        <!--Notícias-->
         <scene sceneID="2zr-Bf-Tb3">
             <objects>
                 <viewController id="vRX-Xk-85J" customClass="TopicosViewController" customModule="Noticias" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,47 +17,86 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sRn-SQ-XnJ">
-                                <rect key="frame" x="109" y="115" width="156" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.49019607840000001" green="0.70980392160000005" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Técnologia"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r0y-X8-ek6">
+                                <rect key="frame" x="16" y="452" width="344" height="93"/>
+                                <color key="backgroundColor" red="0.25655551083070122" green="0.42977637395188145" blue="0.58068289974619292" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="93" id="9j7-a7-kA4"/>
+                                    <constraint firstAttribute="width" constant="344" id="y7t-MA-k2k"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="27"/>
+                                <state key="normal" title="Ciências">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" red="0.29857318026823276" green="0.41109007886165294" blue="0.58068289974619292" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="segueTecnologia" id="bAt-Bw-hfD"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="segueCiencias" id="BWI-PL-5dc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6zS-01-Ut2">
-                                <rect key="frame" x="109" y="232" width="156" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                <state key="normal" title="Esportes"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6zS-01-Ut2">
+                                <rect key="frame" x="16" y="232" width="344" height="93"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="93" id="NAh-zJ-tU8"/>
+                                    <constraint firstAttribute="width" constant="344" id="yet-wZ-YcR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="27"/>
+                                <state key="normal" title="Esportes">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="segueEsportes" id="I88-00-YBu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xyc-34-wCP">
-                                <rect key="frame" x="109" y="349" width="156" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemPinkColor"/>
-                                <state key="normal" title="Turismo"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xyc-34-wCP">
+                                <rect key="frame" x="16" y="342" width="344" height="93"/>
+                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="93" id="LsL-yC-R0q"/>
+                                    <constraint firstAttribute="width" constant="344" id="diJ-ce-Bd9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="27"/>
+                                <state key="normal" title="Turismo">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="segueTurismo" id="xus-yi-jug"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r0y-X8-ek6">
-                                <rect key="frame" x="109" y="457" width="156" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
-                                <state key="normal" title="Ciências"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sRn-SQ-XnJ">
+                                <rect key="frame" x="16" y="122" width="344" height="93"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="93" id="7MY-dI-iV9"/>
+                                    <constraint firstAttribute="width" constant="344" id="Un3-rh-0Al"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="27"/>
+                                <state key="normal" title="Técnologia">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="segueCiencias" id="BWI-PL-5dc"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="segueTecnologia" id="bAt-Bw-hfD"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nIn-Dq-S8G"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="r0y-X8-ek6" firstAttribute="top" secondItem="xyc-34-wCP" secondAttribute="bottom" constant="17" id="3mH-yF-Um2"/>
+                            <constraint firstItem="nIn-Dq-S8G" firstAttribute="trailing" secondItem="6zS-01-Ut2" secondAttribute="trailing" constant="15" id="4lr-ms-dPm"/>
+                            <constraint firstItem="nIn-Dq-S8G" firstAttribute="trailing" secondItem="xyc-34-wCP" secondAttribute="trailing" constant="15" id="9HM-uZ-Hcf"/>
+                            <constraint firstItem="sRn-SQ-XnJ" firstAttribute="top" secondItem="nIn-Dq-S8G" secondAttribute="top" constant="78" id="CyO-xs-dby"/>
+                            <constraint firstItem="nIn-Dq-S8G" firstAttribute="trailing" secondItem="r0y-X8-ek6" secondAttribute="trailing" constant="15" id="LCS-lh-pAG"/>
+                            <constraint firstItem="nIn-Dq-S8G" firstAttribute="trailing" secondItem="sRn-SQ-XnJ" secondAttribute="trailing" constant="15" id="Ne1-x9-2Qr"/>
+                            <constraint firstItem="r0y-X8-ek6" firstAttribute="leading" secondItem="nIn-Dq-S8G" secondAttribute="leading" constant="16" id="W9D-iN-pvC"/>
+                            <constraint firstItem="6zS-01-Ut2" firstAttribute="top" secondItem="sRn-SQ-XnJ" secondAttribute="bottom" constant="17" id="d3e-zf-zBg"/>
+                            <constraint firstItem="xyc-34-wCP" firstAttribute="top" secondItem="6zS-01-Ut2" secondAttribute="bottom" constant="17" id="mWU-u1-HJN"/>
+                            <constraint firstItem="sRn-SQ-XnJ" firstAttribute="leading" secondItem="nIn-Dq-S8G" secondAttribute="leading" constant="16" id="nmK-Lm-xSS"/>
+                            <constraint firstItem="6zS-01-Ut2" firstAttribute="leading" secondItem="nIn-Dq-S8G" secondAttribute="leading" constant="16" id="ulp-95-6GM"/>
+                            <constraint firstItem="xyc-34-wCP" firstAttribute="leading" secondItem="nIn-Dq-S8G" secondAttribute="leading" constant="16" id="zcQ-Br-fFK"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="QcL-2Q-Pgq"/>
+                    <navigationItem key="navigationItem" title="Notícias" id="QcL-2Q-Pgq"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VA3-8R-TlW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -110,7 +149,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="372" height="380"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y3h-iX-9P9">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y3h-iX-9P9">
                                                             <rect key="frame" x="0.0" y="0.0" width="372" height="177"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadiusTop">
@@ -188,6 +227,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="0Ha-xg-6N2"/>
                     <connections>
+                        <outlet property="labelTitulo" destination="pkA-d8-plY" id="GrX-7J-TPK"/>
                         <outlet property="myCollection" destination="h2w-Gm-Eg3" id="Rjn-Bz-huA"/>
                     </connections>
                 </viewController>
@@ -215,9 +255,12 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="xus-yi-jug"/>
+        <segue reference="bAt-Bw-hfD"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
@@ -227,14 +270,8 @@
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiarySystemGroupedBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
