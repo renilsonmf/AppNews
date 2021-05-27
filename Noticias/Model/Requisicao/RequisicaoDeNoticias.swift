@@ -6,9 +6,10 @@
 import Foundation
 
 class RequisicaoDeNoticias {
-    var apiKey = ApiKey().chave
-    let apiRequisicao = "https://newsapi.org/v2/everything?q=tecnologia&language=pt&apiKey="
-    func makeRequest() -> [Noticia] {
+   
+    func makeRequest(urlRequisicao: String) -> [Noticia] {
+        let apiRequisicao = urlRequisicao
+        let apiKey = ApiKey().chave
         if let url = URL(string: (apiRequisicao)+apiKey)  {
             if let data = try? Data(contentsOf: url) {
                 var news: [Noticia] = []

@@ -10,18 +10,21 @@ import Alamofire
 import AlamofireImage
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+    
 
+    let singleton: ConfiguracaoTopicos = ConfiguracaoTopicos.topicos
+    
     @IBOutlet weak var myCollection: UICollectionView!
     
     let requisicaoDeNoticias = RequisicaoDeNoticias()
     var listaNoticias: [Noticia] = []
-
+    let topicosViewController = TopicosViewController()
     
     override func viewDidLoad() {
         myCollection.delegate = self
         myCollection.dataSource = self
-        listaNoticias = requisicaoDeNoticias.makeRequest()
-        
+        listaNoticias = requisicaoDeNoticias.makeRequest(urlRequisicao: singleton.topicoSelecionado)
+
     }
     // MARK: Numero de linhas
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
