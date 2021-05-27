@@ -23,7 +23,7 @@
                                 <color key="backgroundColor" red="0.49019607840000001" green="0.70980392160000005" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Técnologia"/>
                                 <connections>
-                                    <action selector="buttonUrlTecnologia:" destination="vRX-Xk-85J" eventType="touchUpInside" id="Bp3-R4-xl8"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="segueTecnologia" id="bAt-Bw-hfD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r0y-X8-ek6">
@@ -32,8 +32,16 @@
                                 <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                 <state key="normal" title="Ciências"/>
                                 <connections>
-                                    <action selector="buttonUrlCiencias:" destination="vRX-Xk-85J" eventType="touchUpInside" id="LdI-7A-ScW"/>
-                                    <action selector="buttonUrlTecnologia:" destination="vRX-Xk-85J" eventType="touchUpInside" id="VEY-bX-O6m"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="segueCiencias" id="BWI-PL-5dc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6zS-01-Ut2">
+                                <rect key="frame" x="109" y="328" width="156" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <state key="normal" title="Esportes"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="segueEsportes" id="I88-00-YBu"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -41,9 +49,6 @@
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                     </view>
                     <navigationItem key="navigationItem" id="QcL-2Q-Pgq"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="topico" id="rEm-ob-vCJ"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VA3-8R-TlW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -200,6 +205,9 @@
             <point key="canvasLocation" x="237.59999999999999" y="58.920539730134934"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="I88-00-YBu"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -209,6 +217,9 @@
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
