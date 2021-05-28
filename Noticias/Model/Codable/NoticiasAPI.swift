@@ -30,3 +30,8 @@ struct NoticiaModel: Codable {
 //      case publishedAt, content
     }
 }
+struct UrlPrincipal {
+    let urlInicio = "https://newsapi.org/v2/everything?q="
+    let urlLinguagem = "&language=pt"
+    let pagina = "&page="
+}

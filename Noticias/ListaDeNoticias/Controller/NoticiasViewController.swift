@@ -9,7 +9,7 @@ import UIKit
 import Alamofire
 import AlamofireImage
 
-class NoticiasViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+class NoticiasViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate{
         
     @IBOutlet weak var labelTitulo: UILabel!
     @IBOutlet weak var myCollection: UICollectionView!
@@ -17,14 +17,18 @@ class NoticiasViewController: UIViewController, UICollectionViewDelegate, UIColl
     let requisicaoDeNoticias = RequisicaoDeNoticias()
     var listaNoticias: [NoticiaModel] = []
     var dado = ["",""]
+    var controlador = false
     
     override func viewDidLoad() {
         myCollection.delegate = self
         myCollection.dataSource = self
-    
-        listaNoticias = requisicaoDeNoticias.requisicaoApi(urlRequisicao: dado[1] )
-        
+        carregarNovasNoticias()
         retornaTitulo()
+    }
+    //MARK: Carrega novas noticias
+    func carregarNovasNoticias() {
+        listaNoticias += requisicaoDeNoticias.requisicaoApi(urlRequisicao: dado[1] )
+        myCollection.reloadData()
     }
     
     // MARK: Muda o titulo da categoria de acordo com a categoria selecionada
@@ -65,6 +69,32 @@ class NoticiasViewController: UIViewController, UICollectionViewDelegate, UIColl
     //MARK: Pega o click do usuario e leva ele para a pagina
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         UIApplication.shared.openURL(URL(string: listaNoticias[indexPath.row].url)!)
+    }
+    
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        let gatilho = contentHeight - scrollView.frame.height - 200
+        
+        if offsetY > gatilho{
+            carregaMais()
+        }
+    }
+    
+    func carregaMais(){
+        if !self.controlador{
+            self.controlador = true
+            DispatchQueue.main.async {
+                sleep(1)
+                print("CarregaMaisFunc")
+                self.carregarNovasNoticias()
+                self.controlador = false
+            }
+//            DispatchQueue.global().async {
+//
+//            }
+        }
     }
 
     

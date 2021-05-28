@@ -143,8 +143,8 @@
 		1C3673F026611453009BD631 /* ListaDeNoticias */ = {
 			isa = PBXGroup;
 			children = (
-				1C088173265E86E300F02AB5 /* Controller */,
 				1C088174265E86F300F02AB5 /* View */,
+				1C088173265E86E300F02AB5 /* Controller */,
 			);
 			path = ListaDeNoticias;
 			sourceTree = "<group>";
