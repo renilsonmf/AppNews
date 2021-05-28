@@ -21,8 +21,9 @@ class NoticiasViewController: UIViewController, UICollectionViewDelegate, UIColl
     override func viewDidLoad() {
         myCollection.delegate = self
         myCollection.dataSource = self
-        
+    
         listaNoticias = requisicaoDeNoticias.requisicaoApi(urlRequisicao: dado[1] )
+        
         retornaTitulo()
     }
     
