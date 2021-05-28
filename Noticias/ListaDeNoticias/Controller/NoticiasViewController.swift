@@ -10,10 +10,7 @@ import Alamofire
 import AlamofireImage
 
 class NoticiasViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
-    
-
-    let singleton: ConfiguracaoTopicos = ConfiguracaoTopicos.topicos
-    
+        
     @IBOutlet weak var labelTitulo: UILabel!
     @IBOutlet weak var myCollection: UICollectionView!
     
@@ -25,7 +22,7 @@ class NoticiasViewController: UIViewController, UICollectionViewDelegate, UIColl
         myCollection.delegate = self
         myCollection.dataSource = self
         
-        listaNoticias = requisicaoDeNoticias.makeRequest(urlRequisicao: dado[1] )
+        listaNoticias = requisicaoDeNoticias.requisicaoApi(urlRequisicao: dado[1] )
         retornaTitulo()
     }
     
@@ -43,15 +40,15 @@ class NoticiasViewController: UIViewController, UICollectionViewDelegate, UIColl
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let celulaNoticia = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ListaCollectionViewCell
         
-        celulaNoticia.labelTitulo.text = listaNoticias[indexPath.row].title
-      
         let urlImage = listaNoticias[indexPath.row].urlToImage
+        
         if let image = URL(string: "\(urlImage)") {
             celulaNoticia.imagemNoticia.af_setImage(withURL: image)
         }
+        
+        celulaNoticia.labelTitulo.text = listaNoticias[indexPath.row].title
         celulaNoticia.labelDescricao.text = listaNoticias[indexPath.row].articleDescription
         celulaNoticia.layer.cornerRadius = 9
-    
 
         return celulaNoticia
         

@@ -241,7 +241,7 @@
             </objects>
             <point key="canvasLocation" x="425" y="59"/>
         </scene>
-        <!--Topicos View Controller-->
+        <!--Escolha uma categoria de noticias-->
         <scene sceneID="f60-I9-bBE">
             <objects>
                 <viewController id="Oot-66-Tme" customClass="TopicosViewController" customModule="Noticias" customModuleProvider="target" sceneMemberID="viewController">
@@ -254,24 +254,34 @@
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rQu-1y-yOh">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellCategoria" rowHeight="102" id="o8K-nX-Op0" customClass="ListaCategoriaTableViewCell" customModule="Noticias" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="375" height="102"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellCategoria" rowHeight="130" id="o8K-nX-Op0" customClass="ListaCategoriaTableViewCell" customModule="Noticias" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="375" height="130"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="o8K-nX-Op0" id="Fyy-Rw-IfD">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="102"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Categoria" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mG4-un-gtt">
-                                                            <rect key="frame" x="39" y="11" width="296" height="80"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categoria" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mG4-un-gtt">
+                                                            <rect key="frame" x="39" y="25" width="296" height="80"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="80" id="1r1-2p-VNs"/>
+                                                                <constraint firstAttribute="width" constant="296" id="RRS-Dz-ThK"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottomMargin" secondItem="mG4-un-gtt" secondAttribute="bottom" constant="14" id="XHc-Nw-Nbe"/>
+                                                        <constraint firstItem="mG4-un-gtt" firstAttribute="top" secondItem="Fyy-Rw-IfD" secondAttribute="topMargin" constant="14" id="Xcj-h2-fux"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="mG4-un-gtt" secondAttribute="trailing" constant="24" id="YdX-do-gyK"/>
+                                                        <constraint firstItem="mG4-un-gtt" firstAttribute="leading" secondItem="Fyy-Rw-IfD" secondAttribute="leadingMargin" constant="23" id="bup-Fa-BTS"/>
+                                                    </constraints>
                                                 </tableViewCellContentView>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <connections>
                                                     <outlet property="labelNomeCategoria" destination="mG4-un-gtt" id="EjE-ib-viX"/>
                                                     <segue destination="BYZ-38-t0r" kind="show" identifier="segueCategoria" id="GOl-Jj-U7w"/>
@@ -283,7 +293,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xXO-78-8IB"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="xXO-78-8IB" firstAttribute="bottom" secondItem="LcE-8x-AHN" secondAttribute="bottom" id="2aF-xS-AEq"/>
                             <constraint firstItem="LcE-8x-AHN" firstAttribute="top" secondItem="xXO-78-8IB" secondAttribute="top" id="VBt-f0-lAf"/>
@@ -291,7 +301,7 @@
                             <constraint firstItem="xXO-78-8IB" firstAttribute="trailing" secondItem="LcE-8x-AHN" secondAttribute="trailing" id="m8d-X1-3xV"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="oSa-bf-XeV"/>
+                    <navigationItem key="navigationItem" title="Escolha uma categoria de noticias" id="oSa-bf-XeV"/>
                     <connections>
                         <outlet property="myTableView" destination="rQu-1y-yOh" id="AfZ-fw-sMD"/>
                     </connections>
@@ -302,9 +312,6 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

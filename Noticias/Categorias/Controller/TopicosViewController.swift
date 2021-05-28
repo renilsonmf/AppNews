@@ -8,10 +8,8 @@
 import UIKit
 
 class TopicosViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    //indentificador: cellCategoria
-    
-    let singleton: ConfiguracaoTopicos = ConfiguracaoTopicos.topicos
+        
+    let categorias: ConfiguracaoTopicos = ConfiguracaoTopicos.topicos
     var noticiasviewController: NoticiasViewController?
     
     @IBOutlet weak var myTableView: UITableView!
@@ -21,60 +19,35 @@ class TopicosViewController: UIViewController, UITableViewDelegate, UITableViewD
         myTableView.dataSource = self
     }
     
+    // MARK: Retorna a quantidade de celulas
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return singleton.listaCategorias.count
+        return categorias.listaCategorias.count
     }
     
+    //MARK: Conteudo da celula
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let celulaCategoria = tableView.dequeueReusableCell(withIdentifier: "cellCategoria", for: indexPath) as! ListaCategoriaTableViewCell
-        celulaCategoria.labelNomeCategoria.text = singleton.listaCategorias[indexPath.row][0]
+        celulaCategoria.labelNomeCategoria.text = categorias.listaCategorias[indexPath.row][0]
         return celulaCategoria
     }
     
+    //MARK: Altura da celula
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
+        return 130
+        
     }
+    
+    //MARK: Clique do usuario na celula
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.myTableView.deselectRow(at: indexPath, animated: true)
-        noticiasviewController?.dado = singleton.listaCategorias[indexPath.row]
+        noticiasviewController?.dado = categorias.listaCategorias[indexPath.row]
     }
     
+    //MARK: Direciona o usuario para tela de noticias
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-      
         noticiasviewController = segue.destination as? NoticiasViewController
-        
-        //if segue.identifier == "segueCategoria"{
-        //    noticiasviewController?.singleton.topicoSelecionado = singleton.topicoTecnologia
-      //  }
-        
-            
+     
         }
         
-        
-    
-   // }
-    
-    
-    
-    
-    
-    
-    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        noticiasviewController = segue.destination as? NoticiasViewController
-//        if segue.identifier == "segueTecnologia"{
-//            noticiasviewController?.singleton.topicoSelecionado = singleton.topicoTecnologia
-//        }
-//        else if segue.identifier == "segueEsportes"{
-//            noticiasviewController?.singleton.topicoSelecionado = singleton.topicoEsportes
-//        }
-//        else if segue.identifier == "segueTurismo"{
-//            noticiasviewController?.singleton.topicoSelecionado = singleton.topicoTurismo
-//        }
-//        else{
-//            noticiasviewController?.singleton.topicoSelecionado = singleton.topicoCiencias
-//        }
-//    }
-    
- 
     
 }

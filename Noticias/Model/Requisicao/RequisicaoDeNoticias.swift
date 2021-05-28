@@ -7,16 +7,16 @@ import Foundation
 
 class RequisicaoDeNoticias {
    
-    func makeRequest(urlRequisicao: String) -> [NoticiaModel] {
+    func requisicaoApi(urlRequisicao: String) -> [NoticiaModel] {
         let apiRequisicao = urlRequisicao
         let apiKey = ApiKey().chave
         if let url = URL(string: (apiRequisicao)+apiKey)  {
             if let data = try? Data(contentsOf: url) {
-                var news: [NoticiaModel] = []
+                var noticiasModel: [NoticiaModel] = []
                 let decoder = JSONDecoder()
-                if let newsJson = try? decoder.decode(NoticiasModel.self, from: data) {
-                    news = newsJson.articles
-                    return news
+                if let noticiasJson = try? decoder.decode(NoticiasModel.self, from: data) {
+                    noticiasModel = noticiasJson.articles
+                    return noticiasModel
                 }
             }
         }
